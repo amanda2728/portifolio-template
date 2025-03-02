@@ -1,0 +1,520 @@
+/* estilos gerais */
+body {
+    font-family: "Raleway", sans-serif !important;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none !important;
+  }
+  
+  /* títulos*/
+  h1 {
+    color: red;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 20px;
+    color: #484848;
+  }
+  
+  .section {
+    text-align: center;
+  }
+  
+  .skillbar {
+    cursor: pointer;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  .display {
+    display: block;
+  }
+  
+  /*flash de alertas*/
+  .flash-container {
+    width: 100%;
+    position: fixed;
+    z-index: 700;
+    padding-top: 20px;
+    font-weight: bold;
+  }
+  
+  .alert {
+    text-align: center !important;
+    width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: #211809 !important;
+  }
+  
+  /* cabeçalho */
+  .nav-screen {
+    height: 100%;
+    z-index: 500;
+    position: fixed;
+    background-color: #000;
+    opacity: 1;
+    right: -285px;
+    -webkit-font-smoothing: antialiased;
+    position: fixed;
+    width: 285px;
+  }
+  
+  /*menu lateral*/
+  .nav-screen .active {
+    display: block; /* Torna o menu visível */
+  }
+  
+/* menu de navegação móvel*/
+  .fa-bars {
+    display: none !important;
+    color: red;
+    float: right;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    z-index: 500;
+    cursor: pointer;
+  }
+  
+  /* fechar o menu*/
+  .fa-times {
+    color: red;
+    float: right;
+    padding: 20px;
+    right: 0;
+    z-index: 600;
+    cursor: pointer;
+  }
+  
+  .header-links {
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+  }
+  
+  .header-links li {
+    color: white;
+    display: inline;
+    float: right;
+    padding: 15px;
+    font-size: 16px;
+  }
+  
+  .header-links a {
+    color: #757575;
+    transition: all 0.2s ease-in;
+  }
+  
+  /*menu*/
+  .header-links a:hover {
+    color: red !important;
+  }
+  
+  /* slide menu styles */
+  .nav-container {
+    padding-top: 10%;
+  }
+  
+  .nav-links {
+    width: 250px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .nav-links ul {
+    margin-top: 15%;
+    text-align: center;
+    padding-top: 10%;
+  }
+  
+  .nav-links a {
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 2.5;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .nav-links a:hover {
+    color: red;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  #fp-nav ul li .fp-tooltip {
+    color: #5f5f5f !important;
+  }
+  
+  /* Expansão da borda - efeito no menu*/
+  .header-links a::after {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    content: "";
+    opacity: 0;
+    transition: width 0.6s, opacity 0.8s;
+  }
+  
+  /* efeito de passar o mouse*/
+    /*hover - ativa quando passa o mouse sobre o link*/
+    /*after - cria efeito de borda*/
+  .header-links a:hover::after,
+  .header-links a:focus::after {
+    opacity: 1;
+    width: 100%;
+  }
+  
+  /* efeito do cabeçalho */
+  .opaque-bg {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 380px;
+    padding: 1px 1px 5px 5px;
+  }
+  
+  .aboutme {
+    background: url("/images/image.2.jpg")
+      no-repeat;
+    background-size: cover;
+  }
+
+  /*gabriel augusto*/
+  .aboutme h1 {
+    color: red;
+    font-size: 80px;
+    display: flex;
+    justify-content: center; /*horizontal*/
+    align-items: center; /*vertical*/
+    height: 20vh; /*altura*/
+    text-align: center;
+  }
+
+  .aboutme p {
+    color: white;
+    font-weight: 15000;
+    font-size: 17px;
+  }
+  
+/* cursor piscante */
+.blinking-cursor {
+  font-size: 30px; /* tamanho */
+  font-weight: 500;
+  margin-left: 4px;
+  color: rgb(208, 203, 203); 
+  display: inline-block;
+  animation: blink 1s steps(1) infinite;
+}
+
+/* fazer piscar o cursor */
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: rgb(208, 203, 203);
+  }
+}
+
+  /* seta do cabeçalho */
+  .fa-chevron-down {
+    color: red !important;
+    bottom: 10px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    transition: 1.2s ease;
+  }
+
+/* desenvolvedor full stack*/
+  #holder {
+    font-size: 23px;
+    color: white; /* Para garantir que o texto fique visível */
+  }
+  
+  /*animação genérica da seta*/
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+/* Movimento Scroll da seta - efeito mola (bounce) */
+  .bounce {
+    animation: bounce 2s infinite;
+  }
+  
+
+  /* Skill bars */
+  .container-skillbar {
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 2%;
+    padding-left: 2%;
+    height: auto;
+    overflow: none;
+  }
+
+  /*barra*/
+  .skillbar {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    background: #efefef; /* cor para a parte inativa da barra */
+    height: 30px;
+    border-radius: 30px !important;
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+  }
+  
+  /* cor da barra*/
+  .skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff;
+    background: #6adcfa;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  /* canto esquerdo da barra*/
+  .skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  .skillbar-bar {
+    height: 30px;
+    width: 0px; /* a barra começa vazia*/
+    border-radius: 30px;
+  }
+  
+  /*porcentagem da barra*/
+  .skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;  /* Posiciona o texto no topo da barra de habilidade */
+    font-size: 11px;
+    height: 30px;
+    line-height: 30px;
+    color: black !important;
+  }
+  
+  /* sobre mim */
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+  }
+  
+
+  .content h1 {
+    position: relative;
+    top: -50px;  /* Altura */
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .content-slide {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+  }
+
+  /* nome do projeto*/
+  .slide h1 {
+    position: relative;
+    top: -200px;  /* Altura */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+
+
+  
+  a.btn {
+    width:150px;
+    display:block;
+    margin:-25px 0 0 -75px;
+    padding:1em 0;
+    position:absolute;
+    top:90%; left:50%;
+    font:1.125em 'Arial', sans-serif;
+    font-weight:700;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    border-radius:52px;
+    background: red;
+  }
+  
+  .modal-wrapper {
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0; left:0;
+    background:url(/images/fotoram.matrix.jpg);
+    background-size: cover;
+    visibility:hidden;
+    opacity:0;
+    transition: all 0.25s ease-in-out;
+  }
+
+
+
+  
+  
+  .modal-wrapper.open{
+    opacity:1;
+    visibility:visible;
+  }
+  
+  .modal {
+    width:600px;
+    height:400px;
+    display:block;
+    margin:50% 0 0 -300px;
+    position:relative;
+    top:50%; left:50%;
+    background:#fff;
+    opacity:0;
+    transition: all 0.5s ease-in-out;;
+  }
+  
+  .modal-wrapper.open .modal{
+    margin-top:-200px;
+    opacity:1;
+  }
+
+  .head{
+    width:102%;
+    height:67px;
+    padding:1.5em 5%;
+    overflow:hidden;
+    background:rgba(236, 9, 9, 0.801);
+  }
+  
+  
+  .btn-close{
+    width:32px;
+    height:32px;
+    display:block;
+    float:right;
+  }
+  
+  .btn-close::before, .btn-close::after{
+    content:'';
+    width:32px;
+    height:6px;
+    display:block;
+    background:#fff;
+  }
+  
+  .btn-close::before{
+    margin-top:12px;
+    transform:rotate(45deg);
+  }
+  
+  .btn-close::after{
+    margin-top:-6px;
+    transform:rotate(-45deg);
+  }
+  
+  .content{
+    padding:5%;
+  }
+
+
+
+
+
+
+
+  
+  #fp-nav ul li a span,
+  .fp-slidesNav ul li a span {
+    background: rgba(0, 0, 0, 0.62) !important;
+  }
+  
+  
+  /* estilo conecte-se comigo */
+  .footer {
+    background-color: black;
+    height: 100px;
+    padding-top: 10px;
+  }
+  
+  .footer p {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .social-links a {
+    color: white;
+    padding: 0px 5px 0px 5px;
+  }
+  
+  .social-links a:hover {
+    color: red;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* estilo para resolução */
+  @media (min-width: 100px) and (max-width: 500px) {
+    .fa-bars {
+      display: block !important;
+    }
+  
+    .header-links {
+      display: none;
+    }
+  }
+  
+  /* estilo mobile */
+  @media (min-width: 100px) and (max-width: 400px) {
+    .content {
+      max-width: 300px;
+    }
+  
+    .aboutme h1 {
+      font-size: 28px;
+    }
+  }
+  
